@@ -1,0 +1,170 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    overflow: hidden scroll;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 66px;
+    z-index: 101;
+    display: flex;
+    padding: 0 28px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--table-color);
+    background-color: #ffff;
+
+    .header__item-left,
+    .header__item-right {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: var(--text-color-black);
+        .btn-back {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        img {
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+        }
+        .icon {
+            padding-left: 5px;
+        }
+    }
+    .avatar {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .form {
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        z-index: 100;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    width: 100%;
+    margin-top: 66px;
+    margin-bottom: 66px;
+
+    input {
+        border-radius: 0;
+        margin: 0;
+        font-weight: 400;
+        padding: 10px 0 5px 0;
+        background-color: transparent;
+        border-bottom: 1px solid var(--table-color);
+    }
+    .content__item {
+        display: flex;
+
+        .btn__change-avatar {
+            cursor: pointer;
+            position: relative;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--table-color);
+            margin-right: 350px;
+
+            &:hover .background {
+                display: flex;
+            }
+
+            .background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 50%;
+            }
+            .icon {
+                opacity: 0.5;
+                font-size: 30px;
+                color: var(--text-color);
+            }
+        }
+    }
+    .title {
+        margin-top: 60px;
+        border-bottom: 1px solid var(--table-color);
+        margin-bottom: 23px;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+
+        .message {
+            height: 23px;
+            padding-top: 5px;
+            font-size: 12px;
+            color: var(--primary-color);
+        }
+    }
+}
+.form__change-password {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .btn__change-pass {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+    }
+    .form__password-content {
+        width: 50%;
+        transition: all 0.5s ease-in;
+        transform-origin: top;
+    }
+}
+.btn__update-password {
+    margin-top: 10px;
+    color: var(--text-color);
+    background: var(--primary-color);
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
+.show-message {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 100;
+    transition: all linear 0.5s;
+}

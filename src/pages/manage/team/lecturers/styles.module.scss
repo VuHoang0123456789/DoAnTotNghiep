@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 65px 50px;
+    font-size: 16px;
+    height: 100%;
+}
+.team-infomation,
+.lecturers-infomation {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    hr {
+        border: none;
+        margin: 0 4px;
+        border-bottom: 1px solid var(--table-color);
+    }
+}
+.table__content {
+    li {
+        &:hover {
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: #dbcfcf;
+        }
+    }
+}
+.table__header,
+.table__content-row {
+    display: flex;
+}
+.active {
+    border-radius: 4px;
+    background-color: #dbcfcf;
+}
+.table__header {
+    height: 60px;
+    font-weight: bold;
+}
+.header__column,
+.content-column {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.row__bottom {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+
+    .row__bottom-btn {
+        width: 15%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
+.checkbox-all {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 100%;
+
+    .wrapper__checkbox {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .input {
+        padding: 10px;
+    }
+    .icon {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+}
+.checkbox {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+.form-control {
+    position: absolute;
+    top: calc(100% - 5px);
+    left: 56px;
+    z-index: 100;
+    width: 180px;
+    border-radius: 8px;
+    background-color: var(--text-color);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    li {
+        padding: 5px 20px;
+        font-weight: 500;
+
+        &:hover {
+            cursor: pointer;
+            background: var(--hover-color);
+        }
+    }
+    ul {
+        padding: 10px 0;
+    }
+}
+
+.btn__agree,
+.btn__see,
+.btn__disagree {
+    min-width: 150px;
+}
+
+.btn__see {
+    color: var(--text-color);
+    background-color: var(--button-color);
+    background-image: var(--button-image);
+}
+
+.btn__agree {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.btn__disagree {
+    color: var(--text-color);
+    background-color: var(--cancel-color);
+}
+
+.show-message {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 100;
+    transition: all linear 0.5s;
+}
+.btn {
+    max-width: 140px;
+    margin-bottom: 35px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+    color: var(--text-color-black);
+    background-color: transparent;
+    border: 1px solid var(--border-color-2);
+}
+
+@media (min-width: 46.25em) and (max-width: 63.938em) {
+    .jkgf {
+        text-align: center;
+        height: auto !important;
+        padding: 50px 10px;
+    }
+    .content {
+        .content__lecturers {
+            margin-top: 50px;
+        }
+    }
+}

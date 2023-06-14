@@ -1,0 +1,186 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    overflow: hidden auto;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 66px;
+    z-index: 101;
+    display: flex;
+    padding: 0 28px;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__item-left,
+    .header__item-right {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: var(--text-color-black);
+        .btn-back {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        img {
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+        }
+        .icon {
+            padding-left: 5px;
+        }
+    }
+    .avatar {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .form {
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        z-index: 100;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    width: 100%;
+
+    .content__top {
+        position: relative;
+
+        .background {
+            margin-top: -100px;
+            padding-top: 28%;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            background: url('https://fullstack.edu.vn/static/media/cover-profile.3fb9fed576da4b28386a.png') top/ cover
+                no-repeat;
+        }
+
+        .profile__user {
+            display: flex;
+            width: auto;
+            position: absolute;
+            bottom: -55px;
+            left: 40px;
+            border-radius: 50%;
+        }
+        .btn__change-background {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f5f4f4;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #4f4d4d;
+            font-size: 14px;
+        }
+    }
+    .content__bottom {
+        display: flex;
+        margin-top: 90px;
+
+        .bottom__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 18px 14px;
+            word-break: break-word;
+        }
+    }
+}
+
+.profile__user {
+    .profile__user-avatar {
+        background-color: var(--text-color);
+        border-radius: 50%;
+        width: 172px;
+        height: 172px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 9.85em;
+            height: 9.85em;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+    .profile__user-name {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        span {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-left: 16px;
+            text-align: center;
+        }
+    }
+}
+.btn__change-background {
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-right: 8px;
+    }
+    span {
+        line-height: normal;
+    }
+}
+
+.bottom__item {
+    .bottom__item-content {
+        width: 100%;
+        margin-top: 10px;
+
+        span {
+            font-weight: 600;
+        }
+        p {
+            font-weight: 400;
+        }
+        .btn__see-details {
+            cursor: pointer;
+            display: flex;
+            padding: 0 5px 5px 0;
+            align-items: center;
+            color: #4f4d4d;
+            font-weight: 500;
+            width: 60%;
+            &:hover {
+                color: var(--primary-color);
+            }
+            .icon {
+                margin-left: 5px;
+            }
+        }
+    }
+}

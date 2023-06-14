@@ -1,0 +1,126 @@
+.wrapper_home {
+    position: relative;
+    padding: 65px 50px;
+    overflow: hidden scroll;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.table__content {
+    li {
+        &:hover {
+            cursor: pointer;
+            border-radius: 4px;
+            background-color: #dbcfcf;
+        }
+        hr {
+            border: none;
+            margin: 0 4px;
+            border-bottom: 1px solid var(--table-color);
+        }
+    }
+}
+.table__header,
+.table__content-row {
+    display: flex;
+}
+.active {
+    border-radius: 4px;
+    background-color: #dbcfcf;
+}
+.table__header {
+    height: 60px;
+    font-weight: bold;
+}
+.header__column,
+.content-column {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.title {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.row__bottom {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+
+    .row__bottom-btn {
+        width: 15%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
+.btn__see {
+    color: var(--text-color);
+    background-image: var(--button-image);
+    background-color: var(--button-color);
+}
+.btn__register {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+.item__search {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--table-color);
+    margin-right: 10px;
+
+    .icon {
+        margin-left: 10px;
+    }
+}
+.form__controll {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 240px;
+    z-index: 101;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+    ul {
+        padding: 15px 0;
+    }
+    li {
+        padding: 5px 20px;
+
+        &:hover {
+            background-color: var(--hover-color);
+        }
+    }
+    .input__search {
+        padding: 5px 20px;
+        input {
+            padding: 0;
+            font-size: 14px;
+            border-radius: 4px;
+            background-color: transparent;
+        }
+    }
+}
+
+.show-message {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 100;
+    transition: all linear 0.5s;
+}

@@ -1,0 +1,357 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+:root {
+    --primary-color: #f05123;
+    --cancel-color: #ef0a0a;
+    --message-success: #0aef3a;
+    --message-info: #415feb;
+    --message-error: #dc1818;
+    --message-warring: #f2c40c;
+    --button-primary: #dadada;
+    --button-color: #1dbfaf;
+    --text-color: #ffff;
+    --black-color: #000000;
+    --text-color-black: #666;
+    --button-image: linear-gradient(70.06deg, #2cccff -5%, #22dfbf 106%);
+    --input-primary: rgba(22, 24, 35, 0.06);
+    --border-color-5: rgba(22, 24, 35, 0.5);
+    --border-color-2: rgba(22, 24, 35, 0.2);
+    --table-color: rgba(187, 190, 207, 0.5);
+    --height: calc(100vh - 90px);
+    --background-color: #dcdee880;
+    --width-sitebar: 260px;
+    --hover-color: rgba(187, 190, 207, 0.5);
+}
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 4px;
+    z-index: 100;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: url('../assets/image/backgroundLogin.jpg') top center / 100% no-repeat;
+}
+textarea {
+    display: block;
+    width: 100%;
+    height: 200px;
+    min-height: 44px;
+    flex: 1 1;
+    outline: none;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: var(--input-primary);
+    resize: none;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 99px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--button-primary);
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+span {
+    word-wrap: break-word;
+}
+.tooltip {
+    line-height: normal;
+    color: var(--primary-color);
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+.cursor {
+    cursor: pointer !important;
+}
+
+.font-size-12 {
+    font-size: 12px !important;
+}
+.font-size-14 {
+    font-size: 14px !important;
+}
+.font-size-16 {
+    font-size: 16px !important;
+}
+.font-size-18 {
+    font-size: 18px !important;
+}
+.font-size-20 {
+    font-size: 20px !important;
+}
+.font-size-22 {
+    font-size: 22px !important;
+}
+.font-size-24 {
+    font-size: 24px !important;
+}
+.font-size-28 {
+    font-size: 28px !important;
+}
+
+.font-weight-200 {
+    font-weight: 200 !important;
+}
+.font-weight-400 {
+    font-weight: 400 !important;
+}
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+.font-weight-600 {
+    font-weight: 600 !important;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+.black-color {
+    color: var(--black-color);
+}
+
+.mar-b-5 {
+    margin-bottom: 5px !important;
+}
+.mar-b-10 {
+    margin-bottom: 10px !important;
+}
+.mar-b-15 {
+    margin-bottom: 15px !important;
+}
+.mar-b-20 {
+    margin-bottom: 20px !important;
+}
+.mar-b-30 {
+    margin-bottom: 30px !important;
+}
+.mar-b-50 {
+    margin-bottom: 50px !important;
+}
+
+.mar-t-10 {
+    margin-top: 10px !important;
+}
+.mar-t-15 {
+    margin-top: 15px !important;
+}
+.mar-t-20 {
+    margin-top: 20px !important;
+}
+.mar-t-23 {
+    margin-top: 23px !important;
+}
+.mar-t-100 {
+    margin-top: 100px !important;
+}
+
+.mar-r-5 {
+    margin-right: 5px !important;
+}
+.mar-r-10 {
+    margin-right: 10px !important;
+}
+.mar-r-15 {
+    margin-right: 15px !important;
+}
+.mar-r-20 {
+    margin-right: 20px !important;
+}
+.mar-r-30 {
+    margin-right: 30px !important;
+}
+.mar-r-18 {
+    margin-right: 18px !important;
+}
+
+.mar-l-5 {
+    margin-left: 5px !important;
+}
+.mar-l-10 {
+    margin-left: 10px !important;
+}
+.mar-l-15 {
+    margin-left: 15px !important;
+}
+.mar-l-20 {
+    margin-left: 20px !important;
+}
+.mar-l-130 {
+    margin-left: 130px !important;
+}
+
+.pad-b-10 {
+    padding-bottom: 10px !important;
+}
+
+.transperent {
+    background-color: transparent !important;
+}
+
+.width-5 {
+    width: 5% !important;
+}
+.width-8 {
+    width: 8% !important;
+}
+.width-10 {
+    width: 10% !important;
+}
+.width-17 {
+    width: 17% !important;
+}
+.width-19 {
+    width: 19% !important;
+}
+.width-12 {
+    width: 12% !important;
+}
+.width-15 {
+    width: 15% !important;
+}
+.width-20 {
+    width: 20% !important;
+}
+.width-21 {
+    width: 21% !important;
+}
+.width-25 {
+    width: 25% !important;
+}
+.width-30 {
+    width: 30% !important;
+}
+.width-32 {
+    width: 32% !important;
+}
+.width-35 {
+    width: 35% !important;
+}
+.width-40 {
+    width: 40% !important;
+}
+.width-48 {
+    width: 48% !important;
+}
+.width-50 {
+    width: 50% !important;
+}
+.width-45 {
+    width: 45% !important;
+}
+.width-55 {
+    width: 55% !important;
+}
+.width-60 {
+    width: 60% !important;
+}
+.width-65 {
+    width: 65% !important;
+}
+.width-70 {
+    width: 70% !important;
+}
+.width-80 {
+    width: 80% !important;
+}
+.width-90 {
+    width: 90% !important;
+}
+.width-100 {
+    width: 100% !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+.is-30x30 {
+    width: 30px !important;
+    height: 30px !important;
+}
+.is-40x40 {
+    width: 40px !important;
+    height: 40px !important;
+}
+.is-50x50 {
+    width: 50px !important;
+    height: 50px !important;
+}
+.is-90x90 {
+    width: 90px !important;
+    height: 90px !important;
+}
+
+.is-hidden {
+    display: none !important;
+}

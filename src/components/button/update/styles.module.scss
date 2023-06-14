@@ -1,0 +1,28 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 35px;
+    color: var(--text-color-black);
+    background-color: transparent;
+    border: 1px solid var(--border-color-2);
+
+    &:hover {
+        border: 1px solid var(--border-color-5);
+    }
+}
+.btn__save {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:hover {
+        border: 1px solid var(--primary-color);
+    }
+}
+.btn__cancel,
+.btn__save {
+    width: 70px;
+}

@@ -1,0 +1,45 @@
+.form-controll {
+    border-radius: 8px;
+    min-width: 280px;
+    max-width: 320px;
+    color: var(--text-color-black);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--text-color);
+
+    ul {
+        padding: 20px;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .item {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0;
+        color: var(--text-color-black);
+
+        &:hover {
+            color: var(--black-color);
+        }
+    }
+
+    .item-top {
+        display: flex;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    hr {
+        width: 100%;
+        border: none;
+        margin: 8px 0;
+        border-bottom: 1px solid rgba(22, 24, 35, 0.1);
+    }
+
+    .avatar {
+        border-radius: 50%;
+    }
+}

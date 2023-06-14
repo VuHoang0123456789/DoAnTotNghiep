@@ -1,0 +1,29 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.table__header,
+.table__content {
+    width: 100%;
+}
+.table__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--table-color);
+    .header__column {
+        flex: 1;
+    }
+}
+.table__content {
+    .content__row {
+        display: flex;
+        border-bottom: 1px solid var(--table-color);
+
+        .content__row-column {
+            flex: 1;
+        }
+    }
+}

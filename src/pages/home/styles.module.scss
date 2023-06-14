@@ -1,0 +1,21 @@
+.wrapper_home {
+    position: relative;
+    padding: 0 50px;
+}
+.home__no-login {
+    margin-top: 50px;
+    h2 {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    h3 {
+        padding: 10px 0 15px 0;
+    }
+    p {
+        padding-left: 20px;
+        font-weight: 600;
+    }
+    span {
+        font-weight: 400;
+    }
+}

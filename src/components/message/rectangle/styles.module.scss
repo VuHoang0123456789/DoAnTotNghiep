@@ -1,0 +1,92 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.form_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 25px;
+    animation: ShowForm 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.item_bottom {
+    display: flex;
+    align-items: center;
+}
+
+.item_top {
+    padding: 0 25px 30px 25px;
+    .icon {
+        text-align: center;
+        font-size: 60px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        color: var(--message-warring);
+        line-height: normal;
+    }
+}
+.item_bottom {
+    padding: 0 20px 15px 20px;
+    justify-content: flex-end;
+
+    .btn {
+        width: 30%;
+        outline: none;
+    }
+
+    .btn_ok {
+        color: var(--text-color);
+        background-color: var(--cancel-color);
+        margin-right: 10px;
+    }
+    .btn_cancel {
+        color: var(--text-color);
+        background-color: var(--message-info);
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 16px;
+}
+.icon_close {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 7.5px 15px;
+    top: 0;
+    right: 0;
+}
+
+.is-hidden {
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0);
+}
+
+@keyframes ShowForm {
+    from {
+        opacity: 0;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    to {
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
