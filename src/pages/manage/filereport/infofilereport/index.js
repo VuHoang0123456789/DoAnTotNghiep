@@ -85,7 +85,6 @@ function InfoFileReport() {
             topicName = await GettopicName();
         }
 
-        alert('hoang');
         try {
             const data = new FormData();
             data.append('uploadfile', path);
@@ -114,21 +113,21 @@ function InfoFileReport() {
                 mesage.title = 'Success';
                 mesage.content = jsonData.msg;
                 mesage.type = 'success';
-                if (!topicName) {
-                    return;
-                }
-                const result = await fetch(`${doumainUrl}/student/update-researchfield-topic-name`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        token: Token,
-                        teamid: reportId,
-                    },
-                    body: JSON.stringify({ topicName: topicName }),
-                });
 
-                if (result.status === 200) {
-                    setIsRepoad(!isReload);
+                if (topicName) {
+                    const result = await fetch(`${doumainUrl}/student/update-researchfield-topic-name`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            token: Token,
+                            teamid: reportId,
+                        },
+                        body: JSON.stringify({ topicName: topicName }),
+                    });
+
+                    if (result.status === 200) {
+                        setIsRepoad(!isReload);
+                    }
                 }
             }
 
