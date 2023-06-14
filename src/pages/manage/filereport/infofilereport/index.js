@@ -80,8 +80,12 @@ function InfoFileReport() {
     }
 
     async function Submit() {
-        let topicName = await GettopicName();
+        let topicName;
+        if (stageId.STT === 4) {
+            topicName = await GettopicName();
+        }
 
+        alert('hoang');
         try {
             const data = new FormData();
             data.append('uploadfile', path);
@@ -97,6 +101,7 @@ function InfoFileReport() {
                 body: data,
             });
             setIsDisable(false);
+
             const jsonData = await res.json();
 
             let mesage = {
@@ -106,6 +111,9 @@ function InfoFileReport() {
             };
 
             if (res.status === 200) {
+                mesage.title = 'Success';
+                mesage.content = jsonData.msg;
+                mesage.type = 'success';
                 if (!topicName) {
                     return;
                 }
@@ -122,10 +130,6 @@ function InfoFileReport() {
                 if (result.status === 200) {
                     setIsRepoad(!isReload);
                 }
-
-                mesage.title = 'Success';
-                mesage.content = jsonData.msg;
-                mesage.type = 'success';
             }
 
             if (res.status === 400 || res.status === 404) {
