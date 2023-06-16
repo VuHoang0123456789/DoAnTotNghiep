@@ -7,7 +7,7 @@ import Skeleton from '@/components/skeleton';
 
 const cx = classNames.bind(styles);
 
-function ManagePlatform({ User, Obj, isDisabled, Registered, questions, FormatCount, isLoading, arrs }) {
+function ManagePlatform({ User, Obj, isDisabled, Registered, questions, FormatCount, isLoading, arrs, title }) {
     function RegisterPlatfrom(e) {
         e.stopPropagation();
         Registered();
@@ -16,7 +16,7 @@ function ManagePlatform({ User, Obj, isDisabled, Registered, questions, FormatCo
     return !isLoading ? (
         <div className={cx('container')} onClick={FormatCount}>
             <div className={cx('wrapper')}>
-                <h1 className={cx('title')}>Đăng ký vào Platform</h1>
+                <h1 className={cx('title')}>{title}</h1>
                 <div className={cx('content')}>
                     {User.map((item, index) => {
                         return (

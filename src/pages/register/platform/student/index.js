@@ -503,6 +503,7 @@ function StudentPlatform() {
                 FormatCount={FormatCount}
                 isLoading={isLoading}
                 arrs={arrs}
+                title={'Đăng ký thông tin sinh viên'}
             />
         </div>
     ) : (

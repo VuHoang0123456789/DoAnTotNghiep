@@ -463,6 +463,7 @@ function LecturersPlatform() {
                 isDisabled={isDisabled}
                 isLoading={isLoading}
                 arrs={arrs}
+                title={'Đăng ký thông tin giảng viên'}
             />
         </div>
     ) : (
